@@ -34,8 +34,9 @@
     event.preventDefault()
 
     let results = []
-    const regex = new RegExp(searchInput.value, 'i')
-    results = data.filter(movie => movie.title.match(regex))
+    // const regex = new RegExp(searchInput.value, 'i')
+    // results = data.filter(movie => movie.title.match(regex))
+    results = searchTitle(data, searchInput.value)
     console.log(results)
     // displayDataList(results)
     getTotalPages(results)
